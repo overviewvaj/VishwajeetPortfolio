@@ -364,6 +364,9 @@ return (
                     Studio
                 </a>
 
+                <a href="/WORK">
+                    Work
+                </a>
                 <a href="/About">
                     About
                 </a>
@@ -465,7 +468,7 @@ return (
                 <div className="hero-meta-left">
 
                     <span>
-                        London / India
+                        LONDON · UK
                     </span>
 
                     <span>
