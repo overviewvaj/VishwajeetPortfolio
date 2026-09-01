@@ -1,0 +1,658 @@
+/* =========================================================
+VISHWAJEET JOSHI — ABOUT PAGE
+STEP 6A.2
+========================================================= */
+
+:root {
+    --about-black: #050505;
+    --about-white: #ffffff;
+    --about-cream: #efeee9;
+    --about-gray: #6f6f6f;
+    --about-light-gray: #d8d8d3;
+}
+
+/* =========================================================
+PAGE
+========================================================= */
+
+.about-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--about-black);
+    color: var(--about-white);
+}
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.about-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.58) ), url("/images/background/bkg_image.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* =========================================================
+CONTENT LAYER
+========================================================= */
+
+.about-page > *:not(.about-background) {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.about-header {
+    width: 100%;
+     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 32px 40px 0;
+    
+}
+
+.about-brand {
+    color: var(--about-white);
+     font-family: "Instrument Serif", Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    transition: opacity 250ms ease;
+    
+}
+
+    .about-brand:hover {
+        opacity: 0.65;
+    }
+
+.about-header-meta {
+    display: flex;
+    flex-direction: column;
+     align-items: flex-end;
+    gap: 2px;
+    color: var(--about-white);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.about-hero {
+    width: min(1400px, calc(100% - 80px));
+     margin: 0 auto;
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    
+}
+
+.about-index,
+.about-section-label {
+    font-family: "Inter", Arial, sans-serif;
+     font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
+    
+}
+
+.about-title {
+    max-width: 1100px;
+     margin: 1.75rem 0 0;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(4rem, 9vw, 9rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    color: var(--about-white);
+    
+}
+
+    .about-title em {
+        color: rgba(255, 255, 255, 0.58);
+         font-style: italic;
+        
+    }
+
+.about-introduction {
+    max-width: 680px;
+     margin: 3rem 0 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+    
+}
+
+/* =========================================================
+GENERAL SECTION
+========================================================= */
+
+.about-section {
+    width: min(1400px, calc(100% - 80px));
+     margin: 0 auto;
+    padding: 9rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    
+}
+
+/* =========================================================
+INTRODUCTION SECTION
+========================================================= */
+
+.about-intro-section {
+    display: grid;
+     grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
+    gap: 4rem;
+    
+}
+
+.about-section-content h2 {
+    max-width: 900px;
+     margin: 0;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    
+}
+
+    .about-section-content h2 em {
+        color: rgba(255, 255, 255, 0.55);
+         font-style: italic;
+        
+    }
+
+.about-copy {
+    max-width: 680px;
+     margin-top: 4rem;
+    margin-left: auto;
+    
+}
+
+    .about-copy p {
+        margin: 0 0 1.8rem;
+         font-family: "Inter", Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.68);
+        
+    }
+
+/* =========================================================
+EXPERTISE
+========================================================= */
+
+.about-expertise {
+    display: grid;
+     grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
+    gap: 4rem;
+    
+}
+
+.expertise-grid {
+    display: grid;
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+.expertise-item {
+    position: relative;
+     padding: 2.5rem 2rem 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+    .expertise-item:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+         padding-right: 3rem;
+        
+    }
+
+    .expertise-item:nth-child(even) {
+        padding-left: 3rem;
+    }
+
+.expertise-number {
+    display: block;
+     margin-bottom: 2rem;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    
+}
+
+.expertise-item h3 {
+    margin: 0;
+     font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(2rem, 3vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    
+}
+
+.expertise-item p {
+    max-width: 420px;
+     margin: 1.5rem 0 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.58);
+    
+}
+
+/* =========================================================
+TECHNOLOGY
+========================================================= */
+
+.about-technology {
+    display: grid;
+     grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
+    gap: 4rem;
+    
+}
+
+.technology-content h2 {
+    max-width: 900px;
+     margin: 0;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    
+}
+
+    .technology-content h2 em {
+        color: rgba(255, 255, 255, 0.55);
+         font-style: italic;
+        
+    }
+
+.technology-list {
+    display: flex;
+     flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 4rem;
+    
+}
+
+    .technology-list span {
+        padding: 0.7rem 1rem;
+         border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 999px;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.72);
+        transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+        
+    }
+
+        .technology-list span:hover {
+            background: rgba(255, 255, 255, 0.1);
+             border-color: rgba(255, 255, 255, 0.45);
+            color: var(--about-white);
+            
+        }
+
+/* =========================================================
+PROFESSIONAL FOCUS
+========================================================= */
+
+.about-focus {
+    display: grid;
+     grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
+    gap: 4rem;
+    
+}
+
+.focus-content {
+    display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    
+}
+
+.focus-column {
+    padding-top: 1.5rem;
+     border-top: 1px solid rgba(255, 255, 255, 0.22);
+    
+}
+
+    .focus-column h3 {
+        margin: 0;
+         font-family: "Instrument Serif", Georgia, serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: -0.025em;
+        
+    }
+
+    .focus-column p {
+        margin-top: 1.5rem;
+         font-family: "Inter", Arial, sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.58);
+        
+    }
+
+/* =========================================================
+PHILOSOPHY
+========================================================= */
+
+.about-philosophy {
+    width: min(1200px, calc(100% - 80px));
+     margin: 0 auto;
+    padding: 11rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    
+}
+
+    .about-philosophy blockquote {
+        max-width: 1050px;
+         margin: 4rem 0 0;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        
+    }
+
+        .about-philosophy blockquote em {
+            color: rgba(255, 255, 255, 0.55);
+             font-style: italic;
+            
+        }
+
+/* =========================================================
+CTA
+========================================================= */
+
+.about-cta {
+    width: min(1400px, calc(100% - 80px));
+     margin: 0 auto;
+    padding: 10rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    
+}
+
+    .about-cta h2 {
+        margin: 3rem 0 0;
+         font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(4rem, 8vw, 8rem);
+        font-weight: 400;
+        line-height: 0.9;
+        letter-spacing: -0.045em;
+        
+    }
+
+        .about-cta h2 em {
+            color: rgba(255, 255, 255, 0.55);
+             font-style: italic;
+            
+        }
+
+    .about-cta p {
+        max-width: 500px;
+         margin-top: 2.5rem;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.62);
+        
+    }
+
+.about-cta-links {
+    display: flex;
+     flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    
+}
+
+    .about-cta-links a {
+        display: inline-flex;
+         align-items: center;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 0.9rem;
+        color: var(--about-white);
+        transition: opacity 250ms ease, transform 250ms ease;
+        
+    }
+
+        .about-cta-links a:hover {
+            opacity: 0.65;
+             transform: translateX(4px);
+            
+        }
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.about-footer {
+    width: 100%;
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+    gap: 2rem;
+    padding: 2rem 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.55);
+    
+}
+
+    .about-footer:nth-child(2) {
+        text-align: center;
+    }
+
+    .about-footer a {
+        text-align: right;
+         color: rgba(255, 255, 255, 0.72);
+        transition: opacity 250ms ease;
+        
+    }
+
+        .about-footer a:hover {
+            opacity: 0.55;
+        }
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    
+    .about-header {
+        padding-inline: 28px;
+    }
+
+
+    .about-hero,
+    .about-section,
+    .about-cta {
+        width: calc(100% - 56px);
+    }
+
+
+    .about-intro-section,
+    .about-expertise,
+    .about-technology,
+    .about-focus {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+
+    .focus-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-philosophy {
+        width: calc(100% - 56px);
+    }
+
+
+    .about-footer {
+        padding-inline: 28px;
+    }
+
+   
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    
+    .about-header {
+        padding: 24px 20px 0;
+    }
+
+
+    .about-brand {
+        font-size: 1.3rem;
+    }
+
+
+    .about-hero {
+        width: calc(100% - 40px);
+        min-height: 82vh;
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+
+    .about-section {
+        width: calc(100% - 40px);
+        padding: 6rem 0;
+    }
+
+
+    .about-title {
+        font-size: clamp(3.5rem, 16vw, 6rem);
+    }
+
+
+    .about-introduction {
+        margin-top: 2.5rem;
+        font-size: 0.95rem;
+    }
+
+
+    .about-copy {
+        margin-top: 3rem;
+    }
+
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .expertise-item,
+    .expertise-item:nth-child(odd),
+    .expertise-item:nth-child(even) {
+        padding: 2rem 0 2.5rem;
+        border-right: 0;
+    }
+
+
+    .technology-list {
+        margin-top: 3rem;
+    }
+
+
+    .about-philosophy {
+        width: calc(100% - 40px);
+        padding: 7rem 0;
+    }
+
+
+        .about-philosophy blockquote {
+            margin-top: 3rem;
+            font-size: clamp(2.8rem, 13vw, 5rem);
+        }
+
+
+    .about-cta {
+        width: calc(100% - 40px);
+        padding: 7rem 0;
+    }
+
+
+        .about-cta h2 {
+            font-size: clamp(3.5rem, 15vw, 6rem);
+        }
+
+
+    .about-cta-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+
+    .about-footer {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.5rem 20px;
+        text-align: left;
+    }
+
+
+        .about-footer a {
+            text-align: left;
+        }
+
+    
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    
+}

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+          content="Vishwajeet Joshi — Data, Analytics, Regulatory Technology and AI Professional." />
+
+    <meta name="author"
+          content="Vishwajeet Joshi" />
+
+    <meta name="robots"
+          content="index, follow" />
+
+    <title>@ViewData["Title"] — Vishwajeet Joshi</title>
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="~/favicon.ico" />
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    <!-- Page-specific styles -->
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+
+
+<body>
+
+    <!-- Page content -->
+    @RenderBody()
+
+
+    <!-- Global JavaScript -->
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    <!-- Navigation JavaScript -->
+    <script src="~/js/navigation.js"
+            asp-append-version="true"></script>
+
+    <!-- Page-specific JavaScript -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

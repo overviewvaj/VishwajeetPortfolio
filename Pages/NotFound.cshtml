@@ -1,0 +1,123 @@
+﻿@page
+@model NotFoundModel
+
+@{
+    ViewData["Title"] = "Page Not Found";
+}
+
+@section Styles
+{
+    <link rel="stylesheet"
+          href="~/css/error.css"
+          asp-append-version="true" />
+}
+
+<main class="error-page">
+
+   
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div class="error-background"
+         aria-hidden="true">
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="error-header">
+
+        <a class="error-brand"
+           asp-page="/Index"
+           aria-label="Vishwajeet Joshi home">
+
+            Vishwajeet
+
+        </a>
+
+
+        <div class="error-header-meta">
+
+            <span>ERROR</span>
+
+            <span>404</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ERROR CONTENT
+         ===================================================== -->
+
+    <section class="error-content">
+
+        <div class="error-index">
+            404 / Page Not Found
+        </div>
+
+
+        <h1 class="error-title">
+
+            This page
+            <em>doesn't exist.</em>
+
+        </h1>
+
+
+        <p class="error-description">
+
+            The page you are looking for may have moved,
+            been removed, or may not have been built yet.
+
+        </p>
+
+
+        <!-- =================================================
+             ACTIONS
+             ================================================= -->
+
+        <div class="error-actions">
+
+            <a asp-page="/Index"
+               class="error-primary-link">
+
+                Return Home →
+
+            </a>
+
+
+            <a asp-page="/About"
+               class="error-secondary-link">
+
+                Explore About
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="error-footer">
+
+        <span>
+            Vishwajeet Joshi
+        </span>
+
+        <span>
+            Data • Regulatory Technology • AI
+        </span>
+
+    </footer>
+   
+
+</main>

@@ -1,0 +1,461 @@
+﻿@page
+@model AboutModel
+
+@{
+    ViewData["Title"] = "About";
+}
+
+@section Styles
+{
+    <link rel="stylesheet"
+          href="~/css/about.css"
+          asp-append-version="true" />
+}
+
+<main class="about-page">
+
+    
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div class="about-background"
+         aria-hidden="true">
+    </div>
+
+
+    <!-- =====================================================
+         PAGE HEADER
+         ===================================================== -->
+
+    <header class="about-header">
+
+        <a class="about-brand"
+           asp-page="/Index"
+           aria-label="Vishwajeet Joshi home">
+
+            Vishwajeet
+
+        </a>
+
+
+        <div class="about-header-meta">
+
+            <span>ABOUT</span>
+
+            <span>2026</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ABOUT HERO
+         ===================================================== -->
+
+    <section class="about-hero">
+
+        <div class="about-index">
+            01 / About
+        </div>
+
+
+        <h1 class="about-title">
+
+            Data.
+            <em>Regulation.</em>
+            Intelligence.
+
+        </h1>
+
+
+        <p class="about-introduction">
+
+            I work at the intersection of data, financial services,
+            regulatory technology and artificial intelligence —
+            designing systems that turn complex information into
+            reliable, actionable intelligence.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section class="about-section about-intro-section"
+             id="introduction">
+
+        <div class="about-section-label">
+
+            02 / Introduction
+
+        </div>
+
+
+        <div class="about-section-content">
+
+            <h2>
+
+                Building systems
+                <em>where data meets decisions.</em>
+
+            </h2>
+
+
+            <div class="about-copy">
+
+                <p>
+
+                    My professional work has focused on solving
+                    complex data and reporting problems within
+                    financial services.
+
+                </p>
+
+
+                <p>
+
+                    From regulatory reporting and data quality
+                    governance to automated data pipelines and
+                    AI-ready architectures, I am interested in
+                    building systems that are not only technically
+                    robust, but also understandable, auditable and
+                    useful to the people who depend on them.
+
+                </p>
+
+
+                <p>
+
+                    My approach combines analytical thinking,
+                    engineering discipline and an understanding
+                    of regulatory and business requirements.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERTISE
+         ===================================================== -->
+
+    <section class="about-section about-expertise"
+             id="expertise">
+
+        <div class="about-section-label">
+
+            03 / Expertise
+
+        </div>
+
+
+        <div class="expertise-grid">
+
+
+            <article class="expertise-item">
+
+                <span class="expertise-number">
+                    01
+                </span>
+
+                <h3>
+                    Data Engineering
+                </h3>
+
+                <p>
+
+                    Designing automated data pipelines,
+                    transformation frameworks, data models
+                    and analytical architectures.
+
+                </p>
+
+            </article>
+
+
+            <article class="expertise-item">
+
+                <span class="expertise-number">
+                    02
+                </span>
+
+                <h3>
+                    Regulatory Technology
+                </h3>
+
+                <p>
+
+                    Building reliable reporting and control
+                    frameworks across regulatory data,
+                    governance and compliance processes.
+
+                </p>
+
+            </article>
+
+
+            <article class="expertise-item">
+
+                <span class="expertise-number">
+                    03
+                </span>
+
+                <h3>
+                    Financial Services
+                </h3>
+
+                <p>
+
+                    Applying data and technology to liquidity,
+                    capital, prudential reporting and financial
+                    risk problems.
+
+                </p>
+
+            </article>
+
+
+            <article class="expertise-item">
+
+                <span class="expertise-number">
+                    04
+                </span>
+
+                <h3>
+                    AI &amp; Machine Learning
+                </h3>
+
+                <p>
+
+                    Exploring intelligent systems, machine
+                    learning and AI architectures that make
+                    complex information easier to understand
+                    and act upon.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TECHNOLOGY
+         ===================================================== -->
+
+    <section class="about-section about-technology"
+             id="technology">
+
+        <div class="about-section-label">
+
+            04 / Technology
+
+        </div>
+
+
+        <div class="technology-content">
+
+            <h2>
+
+                Tools are only useful
+                when they <em>solve problems.</em>
+
+            </h2>
+
+
+            <div class="technology-list">
+
+                <span>Python</span>
+                <span>PySpark</span>
+                <span>SQL</span>
+                <span>Microsoft Fabric</span>
+                <span>Azure</span>
+                <span>Databricks</span>
+                <span>Power BI</span>
+                <span>ASP.NET Core</span>
+                <span>React</span>
+                <span>Machine Learning</span>
+                <span>Artificial Intelligence</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFESSIONAL FOCUS
+         ===================================================== -->
+
+    <section class="about-section about-focus"
+             id="focus">
+
+        <div class="about-section-label">
+
+            05 / Professional Focus
+
+        </div>
+
+
+        <div class="focus-content">
+
+            <div class="focus-column">
+
+                <h3>
+                    Data
+                </h3>
+
+                <p>
+
+                    Data architecture, engineering,
+                    transformation, quality and analytical
+                    modelling.
+
+                </p>
+
+            </div>
+
+
+            <div class="focus-column">
+
+                <h3>
+                    Regulation
+                </h3>
+
+                <p>
+
+                    Regulatory reporting, prudential data,
+                    governance, controls and regulatory change.
+
+                </p>
+
+            </div>
+
+
+            <div class="focus-column">
+
+                <h3>
+                    Intelligence
+                </h3>
+
+                <p>
+
+                    AI, machine learning, intelligent automation
+                    and decision-support systems.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PHILOSOPHY
+         ===================================================== -->
+
+    <section class="about-philosophy">
+
+        <div class="about-section-label">
+
+            06 / Philosophy
+
+        </div>
+
+
+        <blockquote>
+
+            “The most valuable systems are not the ones
+            that produce more data.
+
+            <em>
+                They are the ones that make better
+                decisions possible.
+            </em>”
+
+        </blockquote>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section class="about-cta">
+
+        <div class="about-section-label">
+
+            07 / Next
+
+        </div>
+
+
+        <h2>
+
+            Interested in the
+            <em>work?</em>
+
+        </h2>
+
+
+        <p>
+
+            Explore the projects, research and systems
+            behind the work.
+
+        </p>
+
+
+        <div class="about-cta-links">
+
+            <a href="/Studio">
+                Explore Studio →
+            </a>
+
+            <a href="/Journal">
+                Read the Journal →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="about-footer">
+
+        <span>
+            Vishwajeet Joshi
+        </span>
+
+        <span>
+            Data • Regulatory Technology • AI
+        </span>
+
+        <a asp-page="/Index">
+            Back to home ↑
+        </a>
+
+    </footer>
+   
+
+</main>

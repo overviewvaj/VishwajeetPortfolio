@@ -1,0 +1,336 @@
+:root {
+    /* =====================================================
+       CORE COLOURS
+       ===================================================== */
+
+    --cream: #efeee9;
+    --black: #0a0a0a;
+    /* =====================================================
+       EXTENDED PALETTE
+       ===================================================== */
+
+    --surface-dark: #111111;
+    --surface-dark-soft: #171717;
+    --text-primary: var(--cream);
+    --text-secondary: rgba(239, 238, 233, 0.68);
+    --text-muted: rgba(239, 238, 233, 0.45);
+    --border-subtle: rgba(239, 238, 233, 0.18);
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+
+    --font-primary: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+
+    --page-padding-desktop: 40px;
+    --page-padding-tablet: 32px;
+    --page-padding-mobile: 24px;
+    --content-max-width: 1440px;
+    /* =====================================================
+       MOTION
+       ===================================================== */
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-smooth: cubic-bezier(0.76, 0, 0.24, 1);
+    --transition-fast: 300ms ease;
+    --transition-medium: 500ms var(--ease-out);
+    --transition-slow: 700ms var(--ease-smooth);
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    background: var(--black);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   GLOBAL BOX MODEL
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--cream);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline: 1px solid var(--cream);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   PAGE CONTAINER
+   ========================================================= */
+
+.page-container {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-padding-desktop);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .page-container {
+        padding-inline: var(--page-padding-tablet);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .page-container {
+        padding-inline: var(--page-padding-mobile);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================================
+   PORTFOLIO SECTIONS
+   ========================================================= */
+
+.portfolio-section {
+    position: relative;
+    width: 100%;
+    background: var(--black);
+    color: var(--cream);
+    padding: 140px 0;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    margin-bottom: 80px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ABOUT GRID
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8vw;
+    max-width: 1280px;
+}
+
+
+/* =========================================================
+   ABOUT HEADING
+   ========================================================= */
+
+.about-heading h2 {
+    margin: 0;
+    font-size: clamp(3.5rem, 7vw, 8rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+   ========================================================= */
+
+.about-content {
+    max-width: 620px;
+}
+
+
+    .about-content p {
+        margin: 0 0 32px;
+        color: var(--text-secondary);
+        font-size: clamp(1rem, 1.35vw, 1.25rem);
+        line-height: 1.65;
+    }
+
+
+    .about-content .about-lead {
+        margin-bottom: 48px;
+        color: var(--cream);
+        font-size: clamp(1.35rem, 2vw, 2rem);
+        line-height: 1.35;
+    }
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .portfolio-section {
+        padding: 110px 0;
+    }
+
+    .section-label {
+        margin-bottom: 60px;
+    }
+
+    .about-grid {
+        gap: 50px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .portfolio-section {
+        padding: 90px 0;
+    }
+
+    .section-label {
+        margin-bottom: 45px;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(3.25rem, 15vw, 5rem);
+    }
+
+    .about-content .about-lead {
+        margin-bottom: 36px;
+    }
+
+    .about-content p {
+        margin-bottom: 26px;
+    }
+}
+
+/* =========================================================
+   SHARED NON-VIDEO PAGE BACKGROUND
+   ========================================================= */
+
+.page-background {
+    position: relative;
+    min-height: 100dvh;
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.32) ), url("/images/background/bkg_image.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}

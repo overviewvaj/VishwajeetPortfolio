@@ -1,0 +1,518 @@
+Folder: F:\Programs\VishwajeetPortfolio 
+Folder PATH listing for volume New Volume
+Volume serial number is 00000046 1004:FC3D
+F:.
+|   appsettings.Development.json
+|   appsettings.json
+|   Program.cs
+|   tree.txt
+|   VishwajeetPortfolio.csproj
+|   VishwajeetPortfolio.csproj.user
+|   VishwajeetPortfolio.sln
+|   
++---bin
+|   \---Debug
+|       \---net9.0
+|               appsettings.Development.json
+|               appsettings.json
+|               VishwajeetPortfolio.deps.json
+|               VishwajeetPortfolio.dll
+|               VishwajeetPortfolio.exe
+|               VishwajeetPortfolio.pdb
+|               VishwajeetPortfolio.runtimeconfig.json
+|               VishwajeetPortfolio.staticwebassets.endpoints.json
+|               VishwajeetPortfolio.staticwebassets.runtime.json
+|               
++---obj
+|   |   project.assets.json
+|   |   project.nuget.cache
+|   |   VishwajeetPortfolio.csproj.nuget.dgspec.json
+|   |   VishwajeetPortfolio.csproj.nuget.g.props
+|   |   VishwajeetPortfolio.csproj.nuget.g.targets
+|   |   
+|   \---Debug
+|       \---net9.0
+|           |   .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+|           |   ApiEndpoints.json
+|           |   apphost.exe
+|           |   rbcswa.dswa.cache.json
+|           |   rjimswa.dswa.cache.json
+|           |   rjsmcshtml.dswa.cache.json
+|           |   rjsmrazor.dswa.cache.json
+|           |   rpswa.dswa.cache.json
+|           |   staticwebassets.build.endpoints.json
+|           |   staticwebassets.build.json
+|           |   staticwebassets.build.json.cache
+|           |   staticwebassets.development.json
+|           |   staticwebassets.references.upToDateCheck.txt
+|           |   staticwebassets.removed.txt
+|           |   staticwebassets.upToDateCheck.txt
+|           |   VishwajeetPortfolio.AssemblyInfo.cs
+|           |   VishwajeetPortfolio.AssemblyInfoInputs.cache
+|           |   VishwajeetPortfolio.assets.cache
+|           |   VishwajeetPortfolio.csproj.CoreCompileInputs.cache
+|           |   VishwajeetPortfolio.csproj.FileListAbsolute.txt
+|           |   VishwajeetPortfolio.dll
+|           |   VishwajeetPortfolio.GeneratedMSBuildEditorConfig.editorconfig
+|           |   VishwajeetPortfolio.genruntimeconfig.cache
+|           |   VishwajeetPortfolio.GlobalUsings.g.cs
+|           |   VishwajeetPortfolio.MvcApplicationPartsAssemblyInfo.cache
+|           |   VishwajeetPortfolio.pdb
+|           |   VishwajeetPortfolio.RazorAssemblyInfo.cache
+|           |   VishwajeetPortfolio.RazorAssemblyInfo.cs
+|           |   
+|           +---compressed
+|           |       0uwehvp0fy-v0zj4ognzu.gz
+|           |       1mfkgrrldh-o1o13a6vjx.gz
+|           |       2mmczpkqya-c2oey78nd0.gz
+|           |       46137q7tk0-ft3s53vfgj.gz
+|           |       46fc9tbhu7-6pdc2jztkx.gz
+|           |       4bkhl8epgw-c2jlpeoesf.gz
+|           |       4j939vfyx2-hrwsygsryq.gz
+|           |       4khky03kh1-2z0ns9nrw6.gz
+|           |       56wyzxjp7n-r4e9w2rdcm.gz
+|           |       5r2me7wubh-s35ty4nyc5.gz
+|           |       623m746vna-61n19gt1b8.gz
+|           |       63vl9n7wew-mlv21k5csn.gz
+|           |       7aw1cnj0ut-06098lyss8.gz
+|           |       7qw1c70slg-37tfw0ft22.gz
+|           |       7zmr2dm75v-8bkkui47nn.gz
+|           |       84kml0s3qe-erw9l3u2r3.gz
+|           |       9mq6c9vx14-47otxtyo56.gz
+|           |       9wp6tm8qcd-4v8eqarkd7.gz
+|           |       a1rszewmzo-8bkkui47nn.gz
+|           |       aadifeeirx-vr1egmr9el.gz
+|           |       appuw5i1an-dxx9fxp4il.gz
+|           |       azp8w5tz3t-356vix0kms.gz
+|           |       bengg65hg1-ttgo8qnofa.gz
+|           |       bghoqpm8j4-x0q3zqp4vz.gz
+|           |       btfbdmkyqk-ausgxo2sd3.gz
+|           |       cipavr34sw-pj5nd1wqec.gz
+|           |       dh826jhlc3-xtxxf3hu2r.gz
+|           |       dj6nmgfua8-6cfz1n2cew.gz
+|           |       ewx5zn616j-khv3u5hwcm.gz
+|           |       f9zl0jkviy-63fj8s7r0e.gz
+|           |       foknota7k1-y7v9cxd14o.gz
+|           |       g3rr24pkrr-lcd1t2u6c8.gz
+|           |       g507a8bof4-46ein0sx1k.gz
+|           |       glwhl2w2cd-0j3bgjxly4.gz
+|           |       gu17bqj8mm-notf2xhcfb.gz
+|           |       guzf3wtm46-cosvhxvwiu.gz
+|           |       ht3pclfswi-lzl9nlhx6b.gz
+|           |       huo1qm456n-nvvlpmu67g.gz
+|           |       itvz92fzsk-87fc7y1x7t.gz
+|           |       iwscow3py4-rzd6atqjts.gz
+|           |       ju5cl35a7t-j5mq2jizvt.gz
+|           |       jvtvery1xl-fsbi9cje9m.gz
+|           |       kyn72xkunj-pk9g2wxc8p.gz
+|           |       laygxrxvc9-muycvpuwrr.gz
+|           |       mf2seiqzpw-k8d9w2qqmf.gz
+|           |       mfrp2u69rl-bqjiyaj88i.gz
+|           |       mgvplyje9z-ag7o75518u.gz
+|           |       mv53ike3dc-mrlpezrjn3.gz
+|           |       mxuj02s7nx-jd9uben2k1.gz
+|           |       nmdb6ymmjh-d7shbmvgxk.gz
+|           |       p2jdbtb68i-fvhpjtyr6v.gz
+|           |       p7q4dnuslv-0i3buxo5is.gz
+|           |       p9twbfc9hs-ee0r1s7dh0.gz
+|           |       pgfq50favf-tdbxkamptv.gz
+|           |       r3z45qestr-aexeepp0ev.gz
+|           |       t4g230npow-b7pk76d08c.gz
+|           |       uvcugu4qe5-b9sayid5wm.gz
+|           |       v2zh1bdfg3-ub07r2b239.gz
+|           |       vt0ixabbkk-493y06b0oq.gz
+|           |       w7j680cgnm-iovd86k7lj.gz
+|           |       wxk0x1a02x-kbrnm935zg.gz
+|           |       wzhf2zjo3u-jj8uyg4cgr.gz
+|           |       xbuuk015ly-h1s4sie4z3.gz
+|           |       xpa8s2kfgv-83jwlth58m.gz
+|           |       
+|           +---ref
+|           |       VishwajeetPortfolio.dll
+|           |       
+|           +---refint
+|           |       VishwajeetPortfolio.dll
+|           |       
+|           +---scopedcss
+|           |   +---bundle
+|           |   |       VishwajeetPortfolio.styles.css
+|           |   |       
+|           |   +---Pages
+|           |   |   \---Shared
+|           |   |           _Layout.cshtml.rz.scp.css
+|           |   |           
+|           |   \---projectbundle
+|           |           VishwajeetPortfolio.bundle.scp.css
+|           |           
+|           \---staticwebassets
++---Pages
+|   |   Error.cshtml
+|   |   Error.cshtml.cs
+|   |   Index.cshtml
+|   |   Index.cshtml.cs
+|   |   Privacy.cshtml
+|   |   Privacy.cshtml.cs
+|   |   _ViewImports.cshtml
+|   |   _ViewStart.cshtml
+|   |   
+|   \---Shared
+|           _Layout.cshtml
+|           _Layout.cshtml.css
+|           _ValidationScriptsPartial.cshtml
+|           
++---Properties
+|       launchSettings.json
+|       
+\---wwwroot
+    |   favicon.ico
+    |   
+    +---css
+    |       site.css
+    |       
+    +---js
+    |       site.js
+    |       
+    \---lib
+        +---bootstrap
+        |   |   LICENSE
+        |   |   
+        |   \---dist
+        |       +---css
+        |       |       bootstrap-grid.css
+        |       |       bootstrap-grid.css.map
+        |       |       bootstrap-grid.min.css
+        |       |       bootstrap-grid.min.css.map
+        |       |       bootstrap-grid.rtl.css
+        |       |       bootstrap-grid.rtl.css.map
+        |       |       bootstrap-grid.rtl.min.css
+        |       |       bootstrap-grid.rtl.min.css.map
+        |       |       bootstrap-reboot.css
+        |       |       bootstrap-reboot.css.map
+        |       |       bootstrap-reboot.min.css
+        |       |       bootstrap-reboot.min.css.map
+        |       |       bootstrap-reboot.rtl.css
+        |       |       bootstrap-reboot.rtl.css.map
+        |       |       bootstrap-reboot.rtl.min.css
+        |       |       bootstrap-reboot.rtl.min.css.map
+        |       |       bootstrap-utilities.css
+        |       |       bootstrap-utilities.css.map
+        |       |       bootstrap-utilities.min.css
+        |       |       bootstrap-utilities.min.css.map
+        |       |       bootstrap-utilities.rtl.css
+        |       |       bootstrap-utilities.rtl.css.map
+        |       |       bootstrap-utilities.rtl.min.css
+        |       |       bootstrap-utilities.rtl.min.css.map
+        |       |       bootstrap.css
+        |       |       bootstrap.css.map
+        |       |       bootstrap.min.css
+        |       |       bootstrap.min.css.map
+        |       |       bootstrap.rtl.css
+        |       |       bootstrap.rtl.css.map
+        |       |       bootstrap.rtl.min.css
+        |       |       bootstrap.rtl.min.css.map
+        |       |       
+        |       \---js
+        |               bootstrap.bundle.js
+        |               bootstrap.bundle.js.map
+        |               bootstrap.bundle.min.js
+        |               bootstrap.bundle.min.js.map
+        |               bootstrap.esm.js
+        |               bootstrap.esm.js.map
+        |               bootstrap.esm.min.js
+        |               bootstrap.esm.min.js.map
+        |               bootstrap.js
+        |               bootstrap.js.map
+        |               bootstrap.min.js
+        |               bootstrap.min.js.map
+        |               
+        +---jquery
+        |   |   LICENSE.txt
+        |   |   
+        |   \---dist
+        |           jquery.js
+        |           jquery.min.js
+        |           jquery.min.map
+        |           jquery.slim.js
+        |           jquery.slim.min.js
+        |           jquery.slim.min.map
+        |           
+        +---jquery-validation
+        |   |   LICENSE.md
+        |   |   
+        |   \---dist
+        |           additional-methods.js
+        |           additional-methods.min.js
+        |           jquery.validate.js
+        |           jquery.validate.min.js
+        |           
+        \---jquery-validation-unobtrusive
+            |   LICENSE.txt
+            |   
+            \---dist
+                    jquery.validate.unobtrusive.js
+                    jquery.validate.unobtrusive.min.js
+                    
+Folder PATH listing for volume New Volume
+Volume serial number is 0000000E 1004:FC3D
+F:.
+|   appsettings.Development.json
+|   appsettings.json
+|   Program.cs
+|   tree.txt
+|   VishwajeetPortfolio.csproj
+|   VishwajeetPortfolio.csproj.user
+|   VishwajeetPortfolio.sln
+|   
++---bin
+|   \---Debug
+|       \---net9.0
+|               appsettings.Development.json
+|               appsettings.json
+|               VishwajeetPortfolio.deps.json
+|               VishwajeetPortfolio.dll
+|               VishwajeetPortfolio.exe
+|               VishwajeetPortfolio.pdb
+|               VishwajeetPortfolio.runtimeconfig.json
+|               VishwajeetPortfolio.staticwebassets.endpoints.json
+|               VishwajeetPortfolio.staticwebassets.runtime.json
+|               
++---obj
+|   |   project.assets.json
+|   |   project.nuget.cache
+|   |   VishwajeetPortfolio.csproj.nuget.dgspec.json
+|   |   VishwajeetPortfolio.csproj.nuget.g.props
+|   |   VishwajeetPortfolio.csproj.nuget.g.targets
+|   |   
+|   \---Debug
+|       \---net9.0
+|           |   .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+|           |   ApiEndpoints.json
+|           |   apphost.exe
+|           |   rbcswa.dswa.cache.json
+|           |   rjimswa.dswa.cache.json
+|           |   rjsmcshtml.dswa.cache.json
+|           |   rjsmrazor.dswa.cache.json
+|           |   rpswa.dswa.cache.json
+|           |   staticwebassets.build.endpoints.json
+|           |   staticwebassets.build.json
+|           |   staticwebassets.build.json.cache
+|           |   staticwebassets.development.json
+|           |   staticwebassets.references.upToDateCheck.txt
+|           |   staticwebassets.removed.txt
+|           |   staticwebassets.upToDateCheck.txt
+|           |   VishwajeetPortfolio.AssemblyInfo.cs
+|           |   VishwajeetPortfolio.AssemblyInfoInputs.cache
+|           |   VishwajeetPortfolio.assets.cache
+|           |   VishwajeetPortfolio.csproj.CoreCompileInputs.cache
+|           |   VishwajeetPortfolio.csproj.FileListAbsolute.txt
+|           |   VishwajeetPortfolio.dll
+|           |   VishwajeetPortfolio.GeneratedMSBuildEditorConfig.editorconfig
+|           |   VishwajeetPortfolio.genruntimeconfig.cache
+|           |   VishwajeetPortfolio.GlobalUsings.g.cs
+|           |   VishwajeetPortfolio.MvcApplicationPartsAssemblyInfo.cache
+|           |   VishwajeetPortfolio.pdb
+|           |   VishwajeetPortfolio.RazorAssemblyInfo.cache
+|           |   VishwajeetPortfolio.RazorAssemblyInfo.cs
+|           |   
+|           +---compressed
+|           |       0uwehvp0fy-v0zj4ognzu.gz
+|           |       1mfkgrrldh-o1o13a6vjx.gz
+|           |       2mmczpkqya-c2oey78nd0.gz
+|           |       46137q7tk0-ft3s53vfgj.gz
+|           |       46fc9tbhu7-6pdc2jztkx.gz
+|           |       4bkhl8epgw-c2jlpeoesf.gz
+|           |       4j939vfyx2-hrwsygsryq.gz
+|           |       4khky03kh1-2z0ns9nrw6.gz
+|           |       56wyzxjp7n-r4e9w2rdcm.gz
+|           |       5r2me7wubh-s35ty4nyc5.gz
+|           |       623m746vna-61n19gt1b8.gz
+|           |       63vl9n7wew-mlv21k5csn.gz
+|           |       7aw1cnj0ut-06098lyss8.gz
+|           |       7qw1c70slg-37tfw0ft22.gz
+|           |       7zmr2dm75v-8bkkui47nn.gz
+|           |       84kml0s3qe-erw9l3u2r3.gz
+|           |       9mq6c9vx14-47otxtyo56.gz
+|           |       9wp6tm8qcd-4v8eqarkd7.gz
+|           |       a1rszewmzo-8bkkui47nn.gz
+|           |       aadifeeirx-vr1egmr9el.gz
+|           |       appuw5i1an-dxx9fxp4il.gz
+|           |       azp8w5tz3t-356vix0kms.gz
+|           |       bengg65hg1-ttgo8qnofa.gz
+|           |       bghoqpm8j4-x0q3zqp4vz.gz
+|           |       btfbdmkyqk-ausgxo2sd3.gz
+|           |       cipavr34sw-pj5nd1wqec.gz
+|           |       dh826jhlc3-xtxxf3hu2r.gz
+|           |       dj6nmgfua8-6cfz1n2cew.gz
+|           |       ewx5zn616j-khv3u5hwcm.gz
+|           |       f9zl0jkviy-63fj8s7r0e.gz
+|           |       foknota7k1-y7v9cxd14o.gz
+|           |       g3rr24pkrr-lcd1t2u6c8.gz
+|           |       g507a8bof4-46ein0sx1k.gz
+|           |       glwhl2w2cd-0j3bgjxly4.gz
+|           |       gu17bqj8mm-notf2xhcfb.gz
+|           |       guzf3wtm46-cosvhxvwiu.gz
+|           |       ht3pclfswi-lzl9nlhx6b.gz
+|           |       huo1qm456n-nvvlpmu67g.gz
+|           |       itvz92fzsk-87fc7y1x7t.gz
+|           |       iwscow3py4-rzd6atqjts.gz
+|           |       ju5cl35a7t-j5mq2jizvt.gz
+|           |       jvtvery1xl-fsbi9cje9m.gz
+|           |       kyn72xkunj-pk9g2wxc8p.gz
+|           |       laygxrxvc9-muycvpuwrr.gz
+|           |       mf2seiqzpw-k8d9w2qqmf.gz
+|           |       mfrp2u69rl-bqjiyaj88i.gz
+|           |       mgvplyje9z-ag7o75518u.gz
+|           |       mv53ike3dc-mrlpezrjn3.gz
+|           |       mxuj02s7nx-jd9uben2k1.gz
+|           |       nmdb6ymmjh-d7shbmvgxk.gz
+|           |       p2jdbtb68i-fvhpjtyr6v.gz
+|           |       p7q4dnuslv-0i3buxo5is.gz
+|           |       p9twbfc9hs-ee0r1s7dh0.gz
+|           |       pgfq50favf-tdbxkamptv.gz
+|           |       r3z45qestr-aexeepp0ev.gz
+|           |       t4g230npow-b7pk76d08c.gz
+|           |       uvcugu4qe5-b9sayid5wm.gz
+|           |       v2zh1bdfg3-ub07r2b239.gz
+|           |       vt0ixabbkk-493y06b0oq.gz
+|           |       w7j680cgnm-iovd86k7lj.gz
+|           |       wxk0x1a02x-kbrnm935zg.gz
+|           |       wzhf2zjo3u-jj8uyg4cgr.gz
+|           |       xbuuk015ly-h1s4sie4z3.gz
+|           |       xpa8s2kfgv-83jwlth58m.gz
+|           |       
+|           +---ref
+|           |       VishwajeetPortfolio.dll
+|           |       
+|           +---refint
+|           |       VishwajeetPortfolio.dll
+|           |       
+|           +---scopedcss
+|           |   +---bundle
+|           |   |       VishwajeetPortfolio.styles.css
+|           |   |       
+|           |   +---Pages
+|           |   |   \---Shared
+|           |   |           _Layout.cshtml.rz.scp.css
+|           |   |           
+|           |   \---projectbundle
+|           |           VishwajeetPortfolio.bundle.scp.css
+|           |           
+|           \---staticwebassets
++---Pages
+|   |   Error.cshtml
+|   |   Error.cshtml.cs
+|   |   Index.cshtml
+|   |   Index.cshtml.cs
+|   |   _ViewImports.cshtml
+|   |   _ViewStart.cshtml
+|   |   
+|   \---Shared
+|           _Layout.cshtml
+|           _Layout.cshtml.css
+|           _ValidationScriptsPartial.cshtml
+|           
++---Properties
+|       launchSettings.json
+|       
+\---wwwroot
+    |   favicon.ico
+    |   
+    +---css
+    |       home.css
+    |       site.css
+    |       
+    +---documents
+    +---fonts
+    +---images
+    |   +---background
+    |   +---icons
+    |   +---profile
+    |   |       profile.png
+    |   |       
+    |   +---projects
+    |   +---research
+    |   \---writing
+    +---js
+    |       navigation.js
+    |       site.js
+    |       
+    \---lib
+        +---bootstrap
+        |   |   LICENSE
+        |   |   
+        |   \---dist
+        |       +---css
+        |       |       bootstrap-grid.css
+        |       |       bootstrap-grid.css.map
+        |       |       bootstrap-grid.min.css
+        |       |       bootstrap-grid.min.css.map
+        |       |       bootstrap-grid.rtl.css
+        |       |       bootstrap-grid.rtl.css.map
+        |       |       bootstrap-grid.rtl.min.css
+        |       |       bootstrap-grid.rtl.min.css.map
+        |       |       bootstrap-reboot.css
+        |       |       bootstrap-reboot.css.map
+        |       |       bootstrap-reboot.min.css
+        |       |       bootstrap-reboot.min.css.map
+        |       |       bootstrap-reboot.rtl.css
+        |       |       bootstrap-reboot.rtl.css.map
+        |       |       bootstrap-reboot.rtl.min.css
+        |       |       bootstrap-reboot.rtl.min.css.map
+        |       |       bootstrap-utilities.css
+        |       |       bootstrap-utilities.css.map
+        |       |       bootstrap-utilities.min.css
+        |       |       bootstrap-utilities.min.css.map
+        |       |       bootstrap-utilities.rtl.css
+        |       |       bootstrap-utilities.rtl.css.map
+        |       |       bootstrap-utilities.rtl.min.css
+        |       |       bootstrap-utilities.rtl.min.css.map
+        |       |       bootstrap.css
+        |       |       bootstrap.css.map
+        |       |       bootstrap.min.css
+        |       |       bootstrap.min.css.map
+        |       |       bootstrap.rtl.css
+        |       |       bootstrap.rtl.css.map
+        |       |       bootstrap.rtl.min.css
+        |       |       bootstrap.rtl.min.css.map
+        |       |       
+        |       \---js
+        |               bootstrap.bundle.js
+        |               bootstrap.bundle.js.map
+        |               bootstrap.bundle.min.js
+        |               bootstrap.bundle.min.js.map
+        |               bootstrap.esm.js
+        |               bootstrap.esm.js.map
+        |               bootstrap.esm.min.js
+        |               bootstrap.esm.min.js.map
+        |               bootstrap.js
+        |               bootstrap.js.map
+        |               bootstrap.min.js
+        |               bootstrap.min.js.map
+        |               
+        +---jquery
+        |   |   LICENSE.txt
+        |   |   
+        |   \---dist
+        |           jquery.js
+        |           jquery.min.js
+        |           jquery.min.map
+        |           jquery.slim.js
+        |           jquery.slim.min.js
+        |           jquery.slim.min.map
+        |           
+        +---jquery-validation
+        |   |   LICENSE.md
+        |   |   
+        |   \---dist
+        |           additional-methods.js
+        |           additional-methods.min.js
+        |           jquery.validate.js
+        |           jquery.validate.min.js
+        |           
+        \---jquery-validation-unobtrusive
+            |   LICENSE.txt
+            |   
+            \---dist
+                    jquery.validate.unobtrusive.js
+                    jquery.validate.unobtrusive.min.js
+                    
