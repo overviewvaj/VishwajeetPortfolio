@@ -1,0 +1,787 @@
+/* =========================================================
+   ABOUT — CINEMATIC SCROLL VIDEO
+   ========================================================= */
+
+.about-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   500VH SCROLL TRACK
+   ========================================================= */
+
+.about-scroll-track {
+    position: relative;
+    width: 100%;
+    height: 500vh;
+}
+
+
+/* =========================================================
+   STICKY SCENE
+   ========================================================= */
+
+.about-sticky-scene {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #dfe5e8;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.about-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+
+.about-video-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.about-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px 24px;
+    color: #1D3045;
+    transition: color 500ms ease;
+}
+
+
+    .about-navbar.nav-light {
+        color: #ffffff;
+    }
+
+
+/* =========================================================
+   DESKTOP NAV
+   ========================================================= */
+
+.about-desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.about-nav-link {
+    position: relative;
+    color: currentColor;
+    font-family: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: opacity 250ms ease;
+}
+
+
+    .about-nav-link:hover {
+        opacity: 0.7;
+    }
+
+
+    .about-nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -12px;
+        height: 2px;
+        background: currentColor;
+    }
+
+
+/* =========================================================
+   RIGHT NAV
+   ========================================================= */
+
+.about-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.about-news-link,
+.about-menu-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: currentColor;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: opacity 250ms ease;
+}
+
+
+    .about-news-link:hover,
+    .about-menu-label:hover {
+        opacity: 0.7;
+    }
+
+
+.about-info-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: currentColor;
+    color: #ffffff;
+}
+
+
+.about-navbar.nav-light .about-info-circle {
+    color: #1D3045;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.about-mobile-menu-button {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+    .about-mobile-menu-button span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 5px 0;
+        background: currentColor;
+    }
+
+
+/* =========================================================
+   SHARED SECTION
+   ========================================================= */
+
+.about-section {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms ease-out;
+}
+
+
+/* =========================================================
+   STAGGER
+   ========================================================= */
+
+.about-stagger-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+.about-section h1,
+.about-section h2,
+.about-section p,
+.about-section a,
+.about-section button,
+.about-section div {
+    transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.about-section-one-content,
+.about-section-one-content h1,
+.about-section-one-content p,
+.about-section-two-content h2,
+.about-section-two-controls,
+.about-section-three-content p,
+.about-section-three-content h2,
+.about-contact-row {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+
+/* =========================================================
+   SECTION 1
+   ========================================================= */
+
+.about-section-one {
+    display: flex;
+    align-items: center;
+    padding: 120px 24px 100px 24px;
+    color: #1D3045;
+}
+
+
+.about-section-one-content {
+    width: 100%;
+    padding-left: 0;
+}
+
+
+.about-title {
+    margin: 0;
+    max-width: 1000px;
+    font-family: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #1D3045;
+}
+
+
+.about-subtitle {
+    margin: 24px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(29, 48, 69, 0.9);
+}
+
+
+/* =========================================================
+   CIRCLE BUTTON
+   ========================================================= */
+
+.about-circle-button {
+    position: absolute;
+    right: 24px;
+    bottom: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(29, 48, 69, 0.5);
+    border-radius: 50%;
+    background: transparent;
+    color: #1D3045;
+    cursor: pointer;
+    transition: opacity 250ms ease, transform 300ms ease;
+}
+
+
+    .about-circle-button:hover {
+        opacity: 0.7;
+        transform: scale(1.04);
+    }
+
+
+/* =========================================================
+   SECTION 2
+   ========================================================= */
+
+.about-section-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #1D3045;
+}
+
+
+.about-section-two-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.about-section-two-heading {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.5rem, 4.5vw, 4.5rem);
+    font-weight: 200;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+
+.about-text-dark-strong {
+    color: rgba(29, 48, 69, 0.8);
+}
+
+
+.about-text-dark-soft {
+    color: rgba(29, 48, 69, 0.5);
+}
+
+
+/* =========================================================
+   SECTION 2 CONTROLS
+   ========================================================= */
+
+.about-section-two-controls {
+    position: absolute;
+    right: 24px;
+    bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+    .about-section-two-controls .about-circle-button {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        border-color: rgba(29, 48, 69, 0.4);
+    }
+
+
+.about-progress-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+    .about-progress-dots span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(29, 48, 69, 0.4);
+    }
+
+
+        .about-progress-dots span.active {
+            width: 8px;
+            height: 8px;
+            background: #1D3045;
+        }
+
+
+.about-up-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    border: 1px solid rgba(29, 48, 69, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: rgba(29, 48, 69, 0.8);
+    cursor: pointer;
+}
+
+
+    .about-up-button:hover {
+        opacity: 0.7;
+    }
+
+
+/* =========================================================
+   SECTION 3
+   ========================================================= */
+
+.about-section-three {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 120px 24px 100px;
+    color: #ffffff;
+}
+
+
+.about-section-three-content {
+    width: 100%;
+    max-width: 640px;
+    text-align: left;
+}
+
+
+.about-eyebrow {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    letter-spacing: 0.04em;
+}
+
+
+.about-section-three-heading {
+    margin: 0 0 32px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+
+.about-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+
+.about-contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #333333;
+    transition: transform 300ms ease;
+}
+
+
+    .about-contact-button:hover {
+        transform: scale(1.1);
+    }
+
+
+/* =========================================================
+   MOBILE OVERLAY
+   ========================================================= */
+
+.about-mobile-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    background: #1D3045;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+    .about-mobile-overlay.is-open {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+.about-mobile-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 32px 24px 40px;
+    transform: translateY(-32px);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.about-mobile-overlay.is-open
+.about-mobile-panel {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE CLOSE
+   ========================================================= */
+
+.about-mobile-close {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+    .about-mobile-close:hover {
+        border-color: #ffffff;
+    }
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+.about-mobile-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0 24px;
+    transform: translateY(-50%);
+}
+
+
+    .about-mobile-nav a {
+        padding: 12px 24px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: color 250ms ease, transform 300ms ease;
+    }
+
+
+        .about-mobile-nav a:hover,
+        .about-mobile-nav a.active {
+            color: #ffffff;
+        }
+
+
+        .about-mobile-nav a:hover {
+            transform: translateX(4px);
+        }
+
+
+/* =========================================================
+   MOBILE FOOTER
+   ========================================================= */
+
+.about-mobile-footer {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    .about-mobile-footer a {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .about-navbar {
+        padding: 48px 32px 24px;
+    }
+
+    .about-section-one {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .about-section-three {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .about-circle-button {
+        right: 32px;
+    }
+
+    .about-section-two-controls {
+        right: 32px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .about-navbar {
+        padding: 48px 48px 24px;
+    }
+
+    .about-desktop-nav {
+        gap: 40px;
+    }
+
+    .about-section-one {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+
+    .about-section-three {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+
+    .about-circle-button {
+        right: 48px;
+        bottom: 48px;
+    }
+
+    .about-section-two-controls {
+        right: 48px;
+        bottom: 64px;
+    }
+
+    .about-mobile-menu-button {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+    .about-desktop-nav,
+    .about-nav-right {
+        display: none;
+    }
+
+    .about-mobile-menu-button {
+        display: block;
+    }
+
+    .about-navbar {
+        padding: 32px 24px 24px;
+    }
+
+    .about-section-one {
+        padding: 100px 24px;
+        align-items: center;
+    }
+
+    .about-section-three {
+        padding: 100px 24px;
+    }
+
+    .about-section-two-heading {
+        font-size: clamp(1.5rem, 6vw, 3.5rem);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .about-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .about-subtitle {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .about-section-three-heading {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .about-eyebrow {
+        font-size: 16px;
+    }
+
+    .about-section-two-controls {
+        right: 20px;
+        bottom: 40px;
+    }
+
+    .about-circle-button {
+        right: 20px;
+        bottom: 40px;
+    }
+
+    .about-mobile-nav a {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-section,
+    .about-section h1,
+    .about-section h2,
+    .about-section p,
+    .about-section a,
+    .about-section button,
+    .about-section div,
+    .about-video-canvas,
+    .about-mobile-overlay,
+    .about-mobile-panel {
+        transition: none !important;
+    }
+
+    .about-stagger-visible {
+        transform: none !important;
+    }
+}
