@@ -364,7 +364,7 @@ return (
                     Studio
                 </a>
 
-                <a href="/WORK">
+                <a href="/work">
                     Work
                 </a>
                 <a href="/About">
@@ -550,6 +550,13 @@ return (
                         onClick={closeMobileMenu}
                     >
                         Studio
+                    </a>
+
+                    <a
+                        href="/work"
+                        onClick={closeMobileMenu}
+                    >
+                        Work
                     </a>
 
                     <a
