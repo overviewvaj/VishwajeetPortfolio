@@ -1,5 +1,6 @@
 ﻿import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./Work.css";
 
 import {
@@ -12,12 +13,17 @@ import WorkScene from "./components/WorkScene";
 import WorkNavigation from "./components/WorkNavigation";
 import ProjectCard from "./components/ProjectCard";
 
-
 function Work() {
     const navigate = useNavigate();
 
     const [activeCategory, setActiveCategory] =
         useState<ProjectCategory | "all">("all");
+
+    /*
+     * =====================================================
+     * FILTER PROJECTS
+     * =====================================================
+     */
 
     const filteredProjects = useMemo(() => {
         if (activeCategory === "all") {
@@ -30,11 +36,23 @@ function Work() {
         );
     }, [activeCategory]);
 
+    /*
+     * =====================================================
+     * PROJECT NAVIGATION
+     * =====================================================
+     */
+
     const handleProjectSelect = (
         project: Project,
     ) => {
         navigate(project.route);
     };
+
+    /*
+     * =====================================================
+     * PAGE
+     * =====================================================
+     */
 
     return (
         <main className="work-page">
@@ -54,18 +72,8 @@ function Work() {
             ===================================================== */}
 
             <header className="work-header">
-                <div className="work-header__eyebrow">
-                    <span>WORK // SYSTEMS</span>
-
-                    <span>VJ-001</span>
-                </div>
-
                 <div className="work-header__content">
-                    <div>
-                        <p className="work-header__label">
-                            SELECTED SYSTEMS
-                        </p>
-
+                    <div className="work-header__title">
                         <h1>
                             Systems I have
                             <br />
@@ -83,8 +91,14 @@ function Work() {
                     </p>
                 </div>
 
+                {/* =================================================
+                    CATEGORY NAVIGATION
+                ================================================= */}
+
                 <WorkNavigation
-                    activeCategory={activeCategory}
+                    activeCategory={
+                        activeCategory
+                    }
                     onCategoryChange={
                         setActiveCategory
                     }
@@ -111,11 +125,20 @@ function Work() {
 
                 <div className="work-projects__grid">
                     {filteredProjects.map(
-                        (project, index) => (
+                        (
+                            project,
+                            index,
+                        ) => (
                             <ProjectCard
-                                key={project.id}
-                                project={project}
-                                index={index}
+                                key={
+                                    project.id
+                                }
+                                project={
+                                    project
+                                }
+                                index={
+                                    index
+                                }
                                 onSelect={
                                     handleProjectSelect
                                 }
@@ -130,11 +153,23 @@ function Work() {
             ===================================================== */}
 
             <footer className="work-footer">
-                <div className="work-footer__line" />
+                <div className="work-footer__inner">
+                    <div className="work-footer__content">
+                        <div className="work-footer__name">
+                            Vishwajeet Joshi
+                        </div>
 
-                <p>
-                    THE SYSTEM IS THE PORTFOLIO.
-                </p>
+                        <div className="work-footer__descriptor">
+                            DATA · SYSTEMS ·
+                            REGULATION ·
+                            INTELLIGENCE
+                        </div>
+
+                        <div className="work-footer__location">
+                            LONDON · UK
+                        </div>
+                    </div>
+                </div>
             </footer>
         </main>
     );

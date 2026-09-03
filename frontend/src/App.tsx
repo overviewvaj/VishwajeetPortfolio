@@ -7,6 +7,7 @@ import {
 import Home from "./pages/Home/Home";
 import Studio from "./pages/Studio/Studio";
 import Work from "./pages/Work/Work";
+import ScrollTest from "./pages/ScrollTest/ScrollTest";
 
 import {
     getProjectBySlug,
@@ -37,13 +38,22 @@ function App() {
                     path="/work/:slug"
                     element={<ProjectRoute />}
                 />
+
+                {/* Temporary scroll-frame system test */}
+                <Route
+                    path="/scroll-test"
+                    element={<ScrollTest />}
+                />
             </Routes>
         </BrowserRouter>
     );
 }
 
 function ProjectRoute() {
-    const slug = window.location.pathname.split("/").pop();
+    const slug =
+        window.location.pathname
+            .split("/")
+            .pop();
 
     const project = slug
         ? getProjectBySlug(slug)
@@ -77,7 +87,11 @@ function ProjectRoute() {
         );
     }
 
-    return <ProjectPage project={project} />;
+    return (
+        <ProjectPage
+            project={project}
+        />
+    );
 }
 
 export default App;

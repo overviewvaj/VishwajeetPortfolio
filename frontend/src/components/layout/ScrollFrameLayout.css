@@ -1,0 +1,81 @@
+.scroll-frame-layout {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+}
+
+.scroll-frame-layout__canvas {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroll-frame-layout__content {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+}
+
+    .scroll-frame-layout__content > * {
+        pointer-events: auto;
+    }
+
+/*
+ * When the page requires scroll runway (e.g. 500vh canvas scrubbing),
+ * push the footer to the bottom of the scroll track.
+ */
+.scroll-frame-layout--has-scroll .scroll-frame-layout__content > :last-child {
+    margin-top: auto;
+}
+
+/*
+ * When the page does not require scroll, display the footer soon after
+ * the contents without pushing it away or forcing unnecessary scroll.
+ */
+.scroll-frame-layout--no-scroll {
+    min-height: 100vh;
+}
+
+.scroll-frame-layout--no-scroll .scroll-frame-layout__canvas {
+    height: 100vh;
+}
+
+.scroll-frame-layout--no-scroll .scroll-frame-layout__content {
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+.scroll-frame-layout--no-scroll .scroll-frame-layout__content > :last-child {
+    margin-top: 0;
+}
+
+/*
+ * The canvas engine itself owns the fixed viewport.
+ * The grid stack ensures page content starts directly at top: 0,
+ * overlaying the canvas smoothly without being displaced by the runway.
+ */
+
+@media (max-width: 768px) {
+    .scroll-frame-layout {
+        overflow-x: clip;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-frame-layout {
+        scroll-behavior: auto;
+    }
+}

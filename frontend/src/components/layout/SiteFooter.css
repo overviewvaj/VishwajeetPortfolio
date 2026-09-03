@@ -1,0 +1,110 @@
+.site-footer {
+    position: relative;
+    width: 100%;
+    padding: 64px 20px 40px;
+    color: #ffffff;
+}
+
+
+.site-footer__inner {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+
+.site-footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.site-footer__name {
+    color: #ffffff;
+    font-family: "Graphik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   DESCRIPTOR
+   ========================================================= */
+
+.site-footer__descriptor {
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.site-footer__location {
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .site-footer {
+        padding: 64px 35px 48px;
+    }
+
+
+    .site-footer__content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .site-footer {
+        padding: 56px 20px 36px;
+    }
+
+
+    .site-footer__descriptor,
+    .site-footer__location {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-footer {
+        scroll-behavior: auto;
+    }
+}

@@ -1,0 +1,380 @@
+/* =========================================================
+   VISHWAJEET JOSHI — SHARED SITE HEADER
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: grid;
+    /*
+     * Three equal columns intentionally keep the
+     * navigation centred in the viewport.
+     *
+     * Left  = Brand
+     * Centre = Navigation
+     * Right = Empty balancing space
+     */
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 28px 40px;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.site-header__brand {
+    justify-self: start;
+    color: #ffffff;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 1.55rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+
+    .site-header__brand,
+    .site-header__brand:link,
+    .site-header__brand:visited,
+    .site-header__brand:hover,
+    .site-header__brand:active,
+    .site-header__brand:focus {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: none;
+        box-shadow: none;
+        background: none;
+    }
+
+
+        .site-header__brand:hover {
+            opacity: 0.72;
+        }
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.site-header__desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    pointer-events: auto;
+}
+
+
+    .site-header__desktop-nav a {
+        position: relative;
+        color: rgba(255, 255, 255, 0.62);
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+        transition: color 250ms ease, opacity 250ms ease;
+    }
+
+
+        .site-header__desktop-nav a:hover {
+            color: #ffffff;
+        }
+
+
+        .site-header__desktop-nav a.active {
+            color: #ffffff;
+        }
+
+
+            .site-header__desktop-nav a.active::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -7px;
+                height: 1px;
+                background: #ffffff;
+            }
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.site-header__mobile-button {
+    display: none;
+    justify-self: end;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+    .site-header__mobile-button span {
+        position: absolute;
+        left: 50%;
+        width: 24px;
+        height: 1px;
+        background: #ffffff;
+        transform: translateX(-50%);
+        transition: transform 300ms ease, opacity 200ms ease;
+    }
+
+
+        .site-header__mobile-button span:nth-child(1) {
+            top: 13px;
+        }
+
+
+        .site-header__mobile-button span:nth-child(2) {
+            top: 20px;
+        }
+
+
+        .site-header__mobile-button span:nth-child(3) {
+            top: 27px;
+        }
+
+
+    .site-header__mobile-button.is-open
+    span:nth-child(1) {
+        top: 20px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+
+    .site-header__mobile-button.is-open
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .site-header__mobile-button.is-open
+    span:nth-child(3) {
+        top: 20px;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+
+
+/* =========================================================
+   MOBILE DRAWER
+   ========================================================= */
+
+.site-mobile-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 350ms ease;
+}
+
+
+    .site-mobile-drawer.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+.site-mobile-drawer__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(88%, 420px);
+    padding: 90px 32px 40px;
+    background: #101010;
+    transform: translateX(100%);
+    transition: transform 450ms cubic-bezier( 0.76, 0, 0.24, 1 );
+}
+
+
+.site-mobile-drawer.is-open
+.site-mobile-drawer__content {
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   MOBILE CLOSE BUTTON
+   ========================================================= */
+
+.site-mobile-drawer__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+    .site-mobile-drawer__close span {
+        position: absolute;
+        left: 8px;
+        top: 20px;
+        width: 26px;
+        height: 1px;
+        background: #ffffff;
+    }
+
+
+        .site-mobile-drawer__close
+        span:first-child {
+            transform: rotate(45deg);
+        }
+
+
+        .site-mobile-drawer__close
+        span:last-child {
+            transform: rotate(-45deg);
+        }
+
+
+/* =========================================================
+   MOBILE DRAWER BRAND
+   ========================================================= */
+
+.site-mobile-drawer__brand {
+    margin-bottom: 60px;
+    color: #ffffff;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.site-mobile-drawer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+    .site-mobile-drawer__nav a {
+        color: #ffffff;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 2.8rem;
+        line-height: 1;
+        text-decoration: none;
+        transition: opacity 200ms ease;
+    }
+
+
+        .site-mobile-drawer__nav a:hover {
+            opacity: 0.6;
+        }
+
+
+/* =========================================================
+   MOBILE PROFESSIONAL LINKS
+   ========================================================= */
+
+.site-mobile-drawer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    margin-top: 70px;
+}
+
+
+.site-mobile-drawer__links-label {
+    width: 100%;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+.site-mobile-drawer__links a {
+    color: rgba(255, 255, 255, 0.78);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        grid-template-columns: 1fr auto;
+        padding: 24px 28px;
+    }
+
+
+    .site-header__desktop-nav {
+        display: none;
+    }
+
+
+    .site-header__mobile-button {
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 22px 20px;
+    }
+
+
+    .site-header__brand {
+        font-size: 1.35rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-mobile-drawer,
+    .site-mobile-drawer__content,
+    .site-header__mobile-button span,
+    .site-header__desktop-nav a,
+    .site-mobile-drawer__nav a {
+        transition: none !important;
+    }
+}
