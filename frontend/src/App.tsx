@@ -40,6 +40,16 @@ function App() {
                 />
 
                 <Route
+                    path="/About"
+                    element={<Home />}
+                />
+
+                <Route
+                    path="/about"
+                    element={<Home />}
+                />
+
+                <Route
                     path="/work/:slug"
                     element={<ProjectRoute />}
                 />
