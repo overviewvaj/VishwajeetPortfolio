@@ -1,5 +1,6 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ScrollFrameLayout from "../../components/layout/ScrollFrameLayout";
 
 import "./Work.css";
 
@@ -9,7 +10,6 @@ import {
     type Project,
 } from "./data/projects";
 
-import WorkScene from "./components/WorkScene";
 import WorkNavigation from "./components/WorkNavigation";
 import ProjectCard from "./components/ProjectCard";
 
@@ -50,44 +50,52 @@ function Work() {
 
     /*
      * =====================================================
-     * PAGE
+     * PAGE RENDER
      * =====================================================
      */
 
     return (
-        <main className="work-page">
+        <ScrollFrameLayout
+            frameCount={300}
+            framePath="/frames/ezgif-frame-{index}.jpg"
+            scrollHeight="100%"
+            lerp={0.09}
+            className="work-page"
+            contentClassName="work-page__content"
+        >
             {/* =====================================================
-                SYSTEM ENVIRONMENT
+                HERO
             ===================================================== */}
 
-            <WorkScene
-                projects={filteredProjects}
-                onSelectProject={
-                    handleProjectSelect
-                }
-            />
-
-            {/* =====================================================
-                HEADER
-            ===================================================== */}
-
-            <header className="work-header">
-                <div className="work-header__content">
-                    <div className="work-header__title">
-                        <h1>
-                            Systems I have
-                            <br />
-                            designed, engineered
-                            <br />
-                            and delivered.
-                        </h1>
+            <section
+                className="work-hero"
+                aria-labelledby="work-title"
+            >
+                <div className="work-hero__inner">
+                    <div className="work-hero__eyebrow">
+                        <span className="work-hero__tag">WORK</span>
+                        <span>•</span>
+                        SYSTEMS ARCHITECTURE
+                        <span>•</span>
+                        REGULATORY PLATFORMS
+                        <span>•</span>
+                        AI ENGINES
                     </div>
 
-                    <p className="work-header__description">
-                        Production systems, regulatory
-                        infrastructure, AI platforms and
-                        independent research — explored
-                        as systems rather than screenshots.
+                    <h1
+                        id="work-title"
+                        className="work-hero__title"
+                    >
+                        Systems I have
+                        <br />
+                        designed, engineered
+                        <br />
+                        and delivered.
+                    </h1>
+
+                    <p className="work-hero__description">
+                        Production systems, regulatory infrastructure, AI platforms,
+                        and independent research — explored as systems rather than screenshots.
                     </p>
                 </div>
 
@@ -96,82 +104,44 @@ function Work() {
                 ================================================= */}
 
                 <WorkNavigation
-                    activeCategory={
-                        activeCategory
-                    }
-                    onCategoryChange={
-                        setActiveCategory
-                    }
+                    activeCategory={activeCategory}
+                    onCategoryChange={setActiveCategory}
                 />
-            </header>
+            </section>
 
             {/* =====================================================
                 PROJECT SYSTEMS
             ===================================================== */}
 
-            <section className="work-projects">
-                <div className="work-projects__intro">
-                    <span>
-                        {String(
-                            filteredProjects.length,
-                        ).padStart(2, "0")}{" "}
-                        SYSTEMS
-                    </span>
+            <section
+                className="work-projects"
+                aria-label="Engineered project systems"
+            >
+                <div className="work-projects__inner">
+                    <div className="work-projects__intro">
+                        <span>
+                            <span className="work-projects__count">
+                                {String(filteredProjects.length).padStart(2, "0")}
+                            </span>{" "}
+                            SYSTEMS
+                        </span>
 
-                    <span>
-                        CLICK A SYSTEM TO EXPLORE
-                    </span>
-                </div>
+                        <span>CLICK A SYSTEM TO EXPLORE</span>
+                    </div>
 
-                <div className="work-projects__grid">
-                    {filteredProjects.map(
-                        (
-                            project,
-                            index,
-                        ) => (
+                    <div className="work-projects__grid">
+                        {filteredProjects.map((project, index) => (
                             <ProjectCard
-                                key={
-                                    project.id
-                                }
-                                project={
-                                    project
-                                }
-                                index={
-                                    index
-                                }
-                                onSelect={
-                                    handleProjectSelect
-                                }
+                                key={project.id}
+                                project={project}
+                                index={index}
+                                onSelect={handleProjectSelect}
                             />
-                        ),
-                    )}
-                </div>
-            </section>
-
-            {/* =====================================================
-                FOOTER
-            ===================================================== */}
-
-            <footer className="work-footer">
-                <div className="work-footer__inner">
-                    <div className="work-footer__content">
-                        <div className="work-footer__name">
-                            Vishwajeet Joshi
-                        </div>
-
-                        <div className="work-footer__descriptor">
-                            DATA · SYSTEMS ·
-                            REGULATION ·
-                            INTELLIGENCE
-                        </div>
-
-                        <div className="work-footer__location">
-                            LONDON · UK
-                        </div>
+                        ))}
                     </div>
                 </div>
-            </footer>
-        </main>
+            </section>
+        </ScrollFrameLayout>
     );
 }
 
