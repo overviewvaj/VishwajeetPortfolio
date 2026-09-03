@@ -9,6 +9,7 @@ import {
 import Home from "./pages/Home/Home";
 import Studio from "./pages/Studio/Studio";
 import Work from "./pages/Work/Work";
+import Journal from "./pages/Journal/Journal";
 import ScrollTest from "./pages/ScrollTest/ScrollTest";
 import ScrollFrameLayout from "./components/layout/ScrollFrameLayout";
 
@@ -40,6 +41,16 @@ function App() {
                 <Route
                     path="/work/:slug"
                     element={<ProjectRoute />}
+                />
+
+                <Route
+                    path="/Journal"
+                    element={<Journal />}
+                />
+
+                <Route
+                    path="/journal"
+                    element={<Journal />}
                 />
 
                 {/* Temporary scroll-frame system test */}
