@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Studio from "./pages/Studio/Studio";
 import Work from "./pages/Work/Work";
 import Journal from "./pages/Journal/Journal";
+import ReachUs from "./pages/ReachUs/ReachUs";
 import ScrollTest from "./pages/ScrollTest/ScrollTest";
 import ScrollFrameLayout from "./components/layout/ScrollFrameLayout";
 
@@ -51,6 +52,26 @@ function App() {
                 <Route
                     path="/journal"
                     element={<Journal />}
+                />
+
+                <Route
+                    path="/ReachUs"
+                    element={<ReachUs />}
+                />
+
+                <Route
+                    path="/reachus"
+                    element={<ReachUs />}
+                />
+
+                <Route
+                    path="/Contact"
+                    element={<ReachUs />}
+                />
+
+                <Route
+                    path="/contact"
+                    element={<ReachUs />}
                 />
 
                 {/* Temporary scroll-frame system test */}

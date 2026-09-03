@@ -18,7 +18,8 @@ function SiteHeader() {
     const isWork = currentPath.startsWith("/work");
     const isAbout = currentPath === "/about";
     const isJournal = currentPath === "/journal";
-    const isContact = currentPath === "/contact";
+    const isContact =
+        currentPath === "/contact" || currentPath === "/reachus";
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
