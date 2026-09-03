@@ -1,13 +1,24 @@
-﻿import {
+import {
     useEffect,
     useState,
 } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import "./SiteHeader.css";
 
 function SiteHeader() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] =
         useState(false);
+
+    const location = useLocation();
+    const currentPath = location.pathname.toLowerCase();
+
+    const isHome = currentPath === "/";
+    const isStudio = currentPath === "/studio";
+    const isWork = currentPath.startsWith("/work");
+    const isAbout = currentPath === "/about";
+    const isJournal = currentPath === "/journal";
+    const isContact = currentPath === "/contact";
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
@@ -74,13 +85,13 @@ function SiteHeader() {
             <header className="site-header">
                 {/* Brand */}
 
-                <a
+                <Link
                     className="site-header__brand"
-                    href="/"
+                    to="/"
                     aria-label="Vishwajeet Joshi home"
                 >
                     Vishwajeet Joshi
-                </a>
+                </Link>
 
                 {/* Desktop Navigation */}
 
@@ -88,32 +99,47 @@ function SiteHeader() {
                     className="site-header__desktop-nav"
                     aria-label="Primary navigation"
                 >
-                    <a
-                        href="/"
-                        className="active"
+                    <Link
+                        to="/"
+                        className={isHome ? "active" : ""}
                     >
                         Home
-                    </a>
+                    </Link>
 
-                    <a href="/Studio">
+                    <Link
+                        to="/Studio"
+                        className={isStudio ? "active" : ""}
+                    >
                         Studio
-                    </a>
+                    </Link>
 
-                    <a href="/work">
+                    <Link
+                        to="/work"
+                        className={isWork ? "active" : ""}
+                    >
                         Work
-                    </a>
+                    </Link>
 
-                    <a href="/About">
+                    <Link
+                        to="/About"
+                        className={isAbout ? "active" : ""}
+                    >
                         About
-                    </a>
+                    </Link>
 
-                    <a href="/Journal">
+                    <Link
+                        to="/Journal"
+                        className={isJournal ? "active" : ""}
+                    >
                         Journal
-                    </a>
+                    </Link>
 
-                    <a href="/Contact">
+                    <Link
+                        to="/Contact"
+                        className={isContact ? "active" : ""}
+                    >
                         Contact
-                    </a>
+                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -184,59 +210,65 @@ function SiteHeader() {
                         className="site-mobile-drawer__nav"
                         aria-label="Mobile navigation"
                     >
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
+                            className={isHome ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             Home
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/Studio"
+                        <Link
+                            to="/Studio"
+                            className={isStudio ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             Studio
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/work"
+                        <Link
+                            to="/work"
+                            className={isWork ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             Work
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/About"
+                        <Link
+                            to="/About"
+                            className={isAbout ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             About
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/Journal"
+                        <Link
+                            to="/Journal"
+                            className={isJournal ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             Journal
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/Contact"
+                        <Link
+                            to="/Contact"
+                            className={isContact ? "active" : ""}
                             onClick={
                                 closeMobileMenu
                             }
                         >
                             Contact
-                        </a>
+                        </Link>
                     </nav>
 
                     {/* Professional Links */}

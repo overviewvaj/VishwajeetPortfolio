@@ -1,4 +1,4 @@
-﻿import {
+import {
     useCallback,
     useEffect,
     useRef,
@@ -13,6 +13,7 @@ interface ScrollFrameCanvasProps {
     scrollHeight?: string;
     lerp?: number;
     className?: string;
+    showLoader?: boolean;
     onLoadingComplete?: () => void;
 }
 
@@ -24,6 +25,8 @@ const DEFAULT_FRAME_PATH =
 const DEFAULT_SCROLL_HEIGHT = "500vh";
 
 const DEFAULT_LERP = 0.09;
+
+const globalFrameCache = new Map<string, Array<HTMLImageElement | null>>();
 
 function buildFramePath(
     pattern: string,
@@ -44,6 +47,7 @@ function ScrollFrameCanvas({
     scrollHeight = DEFAULT_SCROLL_HEIGHT,
     lerp = DEFAULT_LERP,
     className = "",
+    showLoader = false,
     onLoadingComplete,
 }: ScrollFrameCanvasProps) {
     const canvasRef =
@@ -488,6 +492,18 @@ function ScrollFrameCanvas({
     useEffect(() => {
         let cancelled = false;
 
+        const cachedImages = globalFrameCache.get(framePath);
+        if (cachedImages && cachedImages[0]) {
+            imagesRef.current = cachedImages;
+            currentFrameRef.current = 0;
+            targetFrameRef.current = 0;
+            drawFrame(0);
+            setIsLoaded(true);
+            setLoadingProgress(100);
+            onLoadingComplete?.();
+            return;
+        }
+
         const images =
             new Array<
                 HTMLImageElement | null
@@ -495,6 +511,7 @@ function ScrollFrameCanvas({
 
         imagesRef.current =
             images;
+        globalFrameCache.set(framePath, images);
 
         loadedCountRef.current =
             0;
@@ -615,6 +632,10 @@ function ScrollFrameCanvas({
                     0;
 
                 drawFrame(0);
+
+                /* Reveal content immediately once first frame is ready */
+                setIsLoaded(true);
+                onLoadingComplete?.();
 
                 /*
                  * ------------------------------------
@@ -875,34 +896,36 @@ function ScrollFrameCanvas({
                 />
             </div>
 
-            <div
-                className={`scroll-frame-canvas__loader ${isLoaded
-                        ? "scroll-frame-canvas__loader--loaded"
-                        : ""
-                    }`}
-                aria-hidden={isLoaded}
-            >
-                <div className="scroll-frame-canvas__loader-content">
-                    <div className="scroll-frame-canvas__loader-glow" />
+            {showLoader && (
+                <div
+                    className={`scroll-frame-canvas__loader ${isLoaded
+                            ? "scroll-frame-canvas__loader--loaded"
+                            : ""
+                        }`}
+                    aria-hidden={isLoaded}
+                >
+                    <div className="scroll-frame-canvas__loader-content">
+                        <div className="scroll-frame-canvas__loader-glow" />
 
-                    <div className="scroll-frame-canvas__loader-label">
-                        INITIALIZING SEQUENCE
-                    </div>
+                        <div className="scroll-frame-canvas__loader-label">
+                            INITIALIZING SEQUENCE
+                        </div>
 
-                    <div className="scroll-frame-canvas__progress-track">
-                        <div
-                            className="scroll-frame-canvas__progress-fill"
-                            style={{
-                                width: `${loadingProgress}%`,
-                            }}
-                        />
-                    </div>
+                        <div className="scroll-frame-canvas__progress-track">
+                            <div
+                                className="scroll-frame-canvas__progress-fill"
+                                style={{
+                                    width: `${loadingProgress}%`,
+                                }}
+                            />
+                        </div>
 
-                    <div className="scroll-frame-canvas__progress-text">
-                        {loadingProgress}%
+                        <div className="scroll-frame-canvas__progress-text">
+                            {loadingProgress}%
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

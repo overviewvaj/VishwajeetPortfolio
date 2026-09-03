@@ -40,6 +40,8 @@ interface ScrollFrameLayoutProps {
     onLoadingComplete?: () => void;
 
     noScroll?: boolean;
+
+    showLoader?: boolean;
 }
 
 function ScrollFrameLayout({
@@ -57,6 +59,7 @@ function ScrollFrameLayout({
     contentZIndex = 10,
     onLoadingComplete,
     noScroll = false,
+    showLoader = false,
 }: ScrollFrameLayoutProps) {
     const isNoScroll =
         noScroll ||
@@ -68,7 +71,7 @@ function ScrollFrameLayout({
 
     const effectiveScrollHeight = isNoScroll ? "100vh" : scrollHeight;
 
-    const [isLoaded, setIsLoaded] = useState(!showCanvas);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const handleLoadingComplete = useCallback(() => {
         setIsLoaded(true);
@@ -76,23 +79,15 @@ function ScrollFrameLayout({
     }, [onLoadingComplete]);
 
     useEffect(() => {
-        if (!showCanvas) {
+        /* Reveal page content immediately on mount so reveal animations play without delay */
+        const timer = window.setTimeout(() => {
             setIsLoaded(true);
-            return;
-        }
-
-        /*
-         * Safety fallback: if canvas preloading takes longer than 3.5s
-         * or encounters network stalls, reveal page content gracefully.
-         */
-        const fallbackTimer = window.setTimeout(() => {
-            setIsLoaded(true);
-        }, 3500);
+        }, 50);
 
         return () => {
-            window.clearTimeout(fallbackTimer);
+            window.clearTimeout(timer);
         };
-    }, [showCanvas]);
+    }, []);
 
     const layoutStyle: CSSProperties = {
         position: "relative",
@@ -126,6 +121,7 @@ function ScrollFrameLayout({
                         framePath={framePath}
                         scrollHeight={effectiveScrollHeight}
                         lerp={lerp}
+                        showLoader={showLoader}
                         onLoadingComplete={handleLoadingComplete}
                     />
                 </div>
